@@ -2,6 +2,36 @@
 
 Utility for analysing Ver-ID face templates
 
+## Installation
+
+The iOS framework is distributed on [CocoaPods](https://cocoapods.org).
+
+1. Add the following dependency in your [Podfile](https://guides.cocoapods.org/syntax/podfile.html):
+
+    ```
+    pod 'FaceTemplateAnalysis', '~> 1.0'
+    ```
+2. Add the following script in your Podfile:
+
+    ```
+    post_install do |installer|
+      installer.pods_project.build_configurations.each do |config|
+        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+      end
+      installer.pods_project.targets.each do |target|
+        target.build_configurations.each do |config|
+          config.build_settings.delete 'BUILD_LIBRARY_FOR_DISTRIBUTION'
+        end
+      end
+    end
+    ```
+3. Run:
+
+    ```
+    pod install
+    ```
+4. Open the generated Xcode workspace (xcworkspace file not the xcodeproj file)
+
 ## Usage
 
 1. Create an instance of `VerID`:
