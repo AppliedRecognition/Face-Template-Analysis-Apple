@@ -1,3 +1,5 @@
+![Cocoapods](https://img.shields.io/cocoapods/v/FaceTemplateAnalysis)
+
 # Face Template Analysis
 
 Utility for analysing Ver-ID face templates
