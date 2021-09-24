@@ -1,6 +1,6 @@
-# FaceTemplateAnalysis
+# Face Template Analysis
 
-Collection of face template analysis functions
+Utility for analysing Ver-ID face templates
 
 ## Usage
 
